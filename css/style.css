@@ -1,0 +1,95 @@
+img {
+    max-width: 100%;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    max-width: 100%;
+}
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    z-index: 999;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.294);
+    color: blanchedalmond;
+    transition: all 0.6s;
+    font-size: 20px;
+}
+button:hover {
+    background-color: rgba(0, 0, 0, 0.685);
+}
+.btn-prev {
+    left: 5%;
+}
+.btn-next {
+    right: 5%;
+}
+.carusel-item {
+    display: none;
+    list-style: none;
+    animation-name: effect;
+    animation-duration: 1.5s;
+}
+.carusel-item img {
+    max-height: 800px;
+    object-fit: cover;
+    width: 100%;
+}
+@keyframes effect {
+    from {transform: scale(1.5)}
+    to {transform: scale(1.0)}
+    from {opacity: 0.3;}
+    to {opacity: 1;}
+}
+.active {
+    display: block;
+}
+.dots {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    z-index: 9999;
+}
+  .dots span{
+    cursor: pointer;
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    color: #333;
+    border-radius: 50%;
+    background-color: #dfd6ce;
+}
+.indicators  {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    z-index: 9999;
+
+}
+.indicators span{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.indicators span.active{
+    background-color: rgb(35, 118, 212);
+}
+.indicators span:hover{
+  cursor: pointer;
+}
